@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2BC98792279C7C6600D47C64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC98791279C7C6600D47C64 /* AppDelegate.swift */; };
 		2BC98794279C7C6600D47C64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC98793279C7C6600D47C64 /* SceneDelegate.swift */; };
-		2BC98796279C7C6600D47C64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC98795279C7C6600D47C64 /* ViewController.swift */; };
+		2BC98796279C7C6600D47C64 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC98795279C7C6600D47C64 /* WelcomeViewController.swift */; };
 		2BC98799279C7C6600D47C64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC98797279C7C6600D47C64 /* Main.storyboard */; };
 		2BC9879B279C7C6800D47C64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC9879A279C7C6800D47C64 /* Assets.xcassets */; };
 		2BC9879E279C7C6800D47C64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC9879C279C7C6800D47C64 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		2BC9878E279C7C6600D47C64 /* PersonalQuize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalQuize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC98791279C7C6600D47C64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BC98793279C7C6600D47C64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2BC98795279C7C6600D47C64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2BC98795279C7C6600D47C64 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2BC98798279C7C6600D47C64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BC9879A279C7C6800D47C64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BC9879D279C7C6800D47C64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,47 @@
 		2BC98790279C7C6600D47C64 /* PersonalQuize */ = {
 			isa = PBXGroup;
 			children = (
-				2BC98791279C7C6600D47C64 /* AppDelegate.swift */,
-				2BC98793279C7C6600D47C64 /* SceneDelegate.swift */,
-				2BC98795279C7C6600D47C64 /* ViewController.swift */,
-				2BC98797279C7C6600D47C64 /* Main.storyboard */,
-				2BC9879A279C7C6800D47C64 /* Assets.xcassets */,
-				2BC9879C279C7C6800D47C64 /* LaunchScreen.storyboard */,
-				2BC9879F279C7C6800D47C64 /* Info.plist */,
+				2BC987A8279C7CFA00D47C64 /* ViewControllers */,
+				2BC987A6279C7CD800D47C64 /* Storyboards */,
+				2BC987A7279C7CE900D47C64 /* Resources */,
+				2BC987A5279C7C9900D47C64 /* Configs */,
 			);
 			path = PersonalQuize;
+			sourceTree = "<group>";
+		};
+		2BC987A5279C7C9900D47C64 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				2BC98791279C7C6600D47C64 /* AppDelegate.swift */,
+				2BC98793279C7C6600D47C64 /* SceneDelegate.swift */,
+				2BC9879F279C7C6800D47C64 /* Info.plist */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		2BC987A6279C7CD800D47C64 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2BC98797279C7C6600D47C64 /* Main.storyboard */,
+				2BC9879C279C7C6800D47C64 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2BC987A7279C7CE900D47C64 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2BC9879A279C7C6800D47C64 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2BC987A8279C7CFA00D47C64 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BC98795279C7C6600D47C64 /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BC98796279C7C6600D47C64 /* ViewController.swift in Sources */,
+				2BC98796279C7C6600D47C64 /* WelcomeViewController.swift in Sources */,
 				2BC98792279C7C6600D47C64 /* AppDelegate.swift in Sources */,
 				2BC98794279C7C6600D47C64 /* SceneDelegate.swift in Sources */,
 			);
@@ -291,12 +323,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 475RUK8D4A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PersonalQuize/Info.plist;
+				INFOPLIST_FILE = PersonalQuize/Configs/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Personal Quize";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +340,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,12 +353,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 475RUK8D4A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PersonalQuize/Info.plist;
+				INFOPLIST_FILE = PersonalQuize/Configs/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Personal Quize";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +370,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
