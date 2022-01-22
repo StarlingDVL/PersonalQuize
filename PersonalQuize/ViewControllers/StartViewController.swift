@@ -7,13 +7,9 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class StartViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-
+    @IBAction func unwind(segue: UIStoryboardSegue) {}
 
 }
 
