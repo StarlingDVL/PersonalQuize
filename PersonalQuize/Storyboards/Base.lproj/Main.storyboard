@@ -365,6 +365,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="definitionLabel" destination="rxO-Hg-pUP" id="eKR-VO-Lmx"/>
+                        <outlet property="resultLabel" destination="xDc-Rs-oQa" id="eB5-pL-mpe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OOQ-M7-yJg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="VJR-gR-ER7" userLabel="Exit" sceneMemberID="exit"/>

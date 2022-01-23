@@ -49,6 +49,11 @@ class QuestionsViewController: UIViewController {
         super.viewDidLoad()
         updateUI()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultVC = segue.destination as? ResultViewController else { return }
+        resultVC.chosenAnswers = chosenAnswers
+    }
 
 // MARK: - IB Actions
     
@@ -71,7 +76,6 @@ class QuestionsViewController: UIViewController {
     
     @IBAction func rangedAnswerButtonPressed() {
         let index = lrintf(rangedSlider.value)
-        
         chosenAnswers.append(currentAnswers[index])
         
         nextQuestion()
@@ -86,23 +90,19 @@ extension QuestionsViewController {
         for stackView in [singleStackView, multipleStackView, rangedStackView] {
             stackView?.isHidden = true
         }
-        
         for button in [multipleButton, rangedButton] {
             button?.isHidden = true
         }
         
         let currentQuestion = questions[questionIndex]
-        
         questionLabel.text = currentQuestion.title
         
         let totalProgress = Float(questionIndex) / Float(questions.count)
-        
         questionProgressView.setProgress(totalProgress, animated: true)
         
         title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
         
         showCurrentAnswers(for: currentQuestion.type)
-        
     }
     
     private func showCurrentAnswers(for type: ResponseType) {
@@ -145,7 +145,6 @@ extension QuestionsViewController {
             updateUI()
             return
         }
-        
         performSegue(withIdentifier: "showResult", sender: nil)
     }
 }
