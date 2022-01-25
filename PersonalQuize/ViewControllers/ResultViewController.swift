@@ -21,7 +21,6 @@ class ResultViewController: UIViewController {
         navigationItem.hidesBackButton = true
         
         calculateResult(for: chosenAnswers)
-        getResult()
     }
     
     private func calculateResult(for answers: [Answer]) {
@@ -34,11 +33,13 @@ class ResultViewController: UIViewController {
                 results[answer.animal] = countOfMatches
             }
         }
+        let sortedResults = results.sorted{ $0.value > $1.value }
+        guard let result = sortedResults.first?.key else { return }
+        
+        getResult(from: result)
     }
     
-    private func getResult() {
-        let sortedResults = results.sorted{ $0.value > $1.value }
-        guard let result = sortedResults.first?.key else {return}
+    private func getResult(from result: Animal) {
         resultLabel.text = "Вы - \(result.rawValue)"
         definitionLabel.text = result.definition
     }
